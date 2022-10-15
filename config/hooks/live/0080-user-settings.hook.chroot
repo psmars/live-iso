@@ -149,4 +149,5 @@ EOF
 chmod u+x /root/bin/install_user
 
 chsh -s /usr/bin/zsh
+echo root:wren | chpasswd
 
