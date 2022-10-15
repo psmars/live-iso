@@ -9,14 +9,14 @@ make
 make install
 
 cd /root/points_forces/survey
-cmake -D core_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release .
+cmake -D core_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release -D VTK_PREFIX_PATH=/usr -VTK_MINOR_VERSION=0 .
 make
 make install
 
 cd /root/points_forces/structure/scripts
 wget https://sourceforge.net/projects/pointsforces/files/calipous.png/download -O calipous.png
 cd /root/points_forces/structure/
-cmake -D core_DIR=/usr/local/lib/points_forces -D survey_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release .
+cmake -D core_DIR=/usr/local/lib/points_forces -D survey_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release -D VTK_PREFIX_PATH=/usr -VTK_MINOR_VERSION=0 .
 make
 make install
 cd /root
