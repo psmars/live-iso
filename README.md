@@ -7,5 +7,5 @@
 > lb clean
 > lb config
 > lb build
-> dd if=debian-smars-amd64.hybrid.iso of=/dev/sdX bs=1M; sync
+> dd if=debian-smars-amd64.hybrid.iso | pv | dd of=/dev/sdc bs=1M; sync
 ```
