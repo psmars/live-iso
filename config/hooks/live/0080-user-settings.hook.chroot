@@ -24,7 +24,7 @@ cat << EOF > /root/.export
 export BLOCKSIZE=K
 export BROWSER=firefox
 export EDITOR=nvim
-export GPG_TTY=$(tty)
+export GPG_TTY=\$(tty)
 export HISTFILESIZE=1000
 export HISTSIZE=1000
 export LANG=en_GB.UTF-8
@@ -33,14 +33,14 @@ export LC_COLLATE=POSIX
 export LC_TYPE=en_GB.UTF-8
 export LD_LIBRARY_PATH=/root/lib
 export MM_CHARSET=UTF-8
-export NETGEN_USER_DIR=$HOME
+export NETGEN_USER_DIR=\$HOME
 export NETGENDIR=/usr/local/bin
 export PAGER=less
 export SERIAL_PORT=/dev/ttyUSB0
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)
 export TCLLIBPATH="/usr/local/lib/points_forces"
-export TEXMFCONFIG=$HOME/.texlive/texmf-config
-export TEXMFHOME=$HOME/texmf
+export TEXMFCONFIG=\$HOME/.texlive/texmf-config
+export TEXMFHOME=\$HOME/texmf
 LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:';
 export LS_COLORS
 EOF
@@ -62,18 +62,18 @@ compinit
 # End of lines added by compinstall
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
+    LESS_TERMCAP_md=$'\e[01;31m' \\
+    LESS_TERMCAP_me=$'\e[0m' \\
+    LESS_TERMCAP_se=$'\e[0m' \\
+    LESS_TERMCAP_so=$'\e[01;44;33m' \\
+    LESS_TERMCAP_ue=$'\e[0m' \\
+    LESS_TERMCAP_us=$'\e[01;32m' \\
+    command man "\$@"
 }
 zstyle ':completion:*' menu select
 function prompt_char {
     git branch >/dev/null 2>/dev/null && echo '→' && return
-    echo '$'
+    echo '\$'
 }
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
@@ -81,19 +81,19 @@ zstyle ':vcs_info:*' stagedstr '%F{green}●'
 zstyle ':vcs_info:*' unstagedstr '%F{red}●'
 zstyle ':vcs_info:*' check-for-changes true
 precmd () {
-    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+    if [[ -z \$(git ls-files --other --exclude-standard 2> /dev/null) ]] {
         zstyle ':vcs_info:*' formats ' [%F{green}%b %c%u%F{blue}]'
     } else {
         zstyle ':vcs_info:*' formats ' [%F{green}%b %c%u%F{blue}●%F{blue}]'
     }
     vcs_info
-    echo -ne "\033]0;$(hostname): $(pwd)\a"
+    echo -ne "\033]0;\$(hostname): \$(pwd)\a"
 }
 # precmd () { vcs_info }
 setopt prompt_subst
 PROMPT="
-%{%F{blue}%}%n%{%f%}%F{gray}@%{%F{blue}%}%m %{%F{red}%}%d %F{blue}\$vcs_info_msg_0_
-%f%}$(prompt_char) "
+%{%F{blue}%}%n%{%f%}%F{gray}@%{%F{blue}%}%m %{%F{red}%}%d %F{blue}\\$vcs_info_msg_0_
+%f%}\$(prompt_char) "
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/usr/bin/X11
 source ~/.export
 source ~/.alias
@@ -101,7 +101,7 @@ EOF
 
 #######################################
 cat << EOF > /root/.tclshrc
-if {$tcl_interactive} {
+if {\$tcl_interactive} {
 	package require tclreadline 
 	namespace eval tclreadline {
         	proc prompt1 {} {
@@ -114,8 +114,8 @@ EOF
 
 #######################################
 cat << EOF > /root/.wishrc
-#set auto_path "/usr/local/lib/points_forces $auto_path"
-if {$tcl_interactive} {
+#set auto_path "/usr/local/lib/points_forces \$auto_path"
+if {\$tcl_interactive} {
 	package require tclreadline 
         namespace eval tclreadline {
                 proc prompt1 {} {
@@ -129,7 +129,7 @@ EOF
 mkdir /root/bin
 
 cat << EOF > /root/bin/install_user
-$!/bin/sh
+\$!/bin/sh
 cp /root/.alias /home/user/.alias
 cp /root/.export /home/user/.export
 cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /home/user/.zshrc
