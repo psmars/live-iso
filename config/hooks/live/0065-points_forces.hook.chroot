@@ -1,0 +1,26 @@
+#!/bin/sh
+
+cd /root
+git clone https://git.code.sf.net/p/pointsforces/code points_forces 
+cp /root/points_forces/core/scripts/man2cxx /usr/local/bin
+cd /root/points_forces/core
+cmake -D CMAKE_BUILD_TYPE=Release .
+make
+make install
+
+cd /root/points_forces/survey
+cmake -D core_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release .
+make
+make install
+
+cd /root/points_forces/structure/scripts
+wget https://sourceforge.net/projects/pointsforces/files/calipous.png/download -O calipous.png
+cd /root/points_forces/structure/
+cmake -D core_DIR=/usr/local/lib/points_forces -D survey_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release .
+make
+make install
+cd /root
+rm -rf vxl
+
+/root/points_forces/utils/preparetcl
+

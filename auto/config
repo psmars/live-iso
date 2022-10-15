@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--archive-areas "main contrib non-free" \
+	--parent-archive-areas "main contrib non-free" \
+	--firmware-chroot true \
+	--firmware-binary true \
+	--backports true \
+	--debian-installer live \
+	--debian-installer-gui false \
+	--bootappend-live "boot=live components locales=en_GB.UTF-8 keyboard-layouts=us" \
+	--hdd-label points_forces \
+	--image-name debian-smars \
+	--utc-time true \
+	--apt-recommends true \
+	--clean \
+	"${@}"
