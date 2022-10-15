@@ -143,7 +143,10 @@ ln -s /usr/local/share/points_forces/scripts /home/user/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /home/user/.points_forcesrc
 chown user:user /home/user/.points_forcesrc
 chown -R user:user /home/user/.points_forces
+chsh user -s /usr/bin/zsh
 EOF
 
 chmod u+x /root/bin/install_user
+
+chsh -s /usr/bin/zsh
 
