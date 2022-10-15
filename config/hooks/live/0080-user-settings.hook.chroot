@@ -94,7 +94,7 @@ setopt prompt_subst
 PROMPT="
 %{%F{blue}%}%n%{%f%}%F{gray}@%{%F{blue}%}%m %{%F{red}%}%d %F{blue}\\$vcs_info_msg_0_
 %f%}\$(prompt_char) "
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/usr/bin/X11
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/root/bin:/usr/local/sbin:/usr/bin/X11
 source ~/.export
 source ~/.alias
 EOF
