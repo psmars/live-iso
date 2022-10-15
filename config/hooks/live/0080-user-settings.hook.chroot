@@ -92,7 +92,7 @@ precmd () {
 # precmd () { vcs_info }
 setopt prompt_subst
 PROMPT="
-%{%F{green}%}%n%{%f%}%F{gray}@%{%F{green}%}%m %{%F{red}%}%d %F{blue}\$vcs_info_msg_0_
+%{%F{blue}%}%n%{%f%}%F{gray}@%{%F{blue}%}%m %{%F{red}%}%d %F{blue}\$vcs_info_msg_0_
 %f%}$(prompt_char) "
 source ~/.export
 source ~/.alias
@@ -131,7 +131,7 @@ cat << EOF > /root/bin/install_user
 $!/bin/sh
 cp /root/.alias /home/user/.alias
 cp /root/.export /home/user/.export
-cp /root/.zshrc /home/user/.zshrc
+cat /root/.zshrc | sed 's,blue,green,g' > /home/user/.zshrc
 cp /root/.tclshrc /home/user/.tclshrc
 cp /root/.wishrc /home/user/.wishrc
 chown user:user /home/user/.alias
