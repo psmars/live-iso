@@ -16,5 +16,6 @@ lb config noauto \
 	--iso-volume debian-smars \
 	--utc-time true \
 	--apt-recommends true \
+	--iso-preparer "Pierre SMARS smars@yuntech.edu.tw" \
 	--clean \
 	"${@}"
