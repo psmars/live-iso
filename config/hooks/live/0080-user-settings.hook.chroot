@@ -60,7 +60,7 @@ zstyle :compinstall filename '/home/pierre/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
