@@ -94,6 +94,7 @@ setopt prompt_subst
 PROMPT="
 %{%F{blue}%}%n%{%f%}%F{gray}@%{%F{blue}%}%m %{%F{red}%}%d %F{blue}\$vcs_info_msg_0_
 %f%}$(prompt_char) "
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/usr/bin/X11
 source ~/.export
 source ~/.alias
 EOF
@@ -131,7 +132,8 @@ cat << EOF > /root/bin/install_user
 $!/bin/sh
 cp /root/.alias /home/user/.alias
 cp /root/.export /home/user/.export
-cat /root/.zshrc | sed 's,blue,green,g' > /home/user/.zshrc
+cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /home/user/.zshrc
+echo export PATH=/usr/local/bin:/usr/bin:/bin:/home/user/bin >> /home/user/.zshrc
 cp /root/.tclshrc /home/user/.tclshrc
 cp /root/.wishrc /home/user/.wishrc
 chown user:user /home/user/.alias
