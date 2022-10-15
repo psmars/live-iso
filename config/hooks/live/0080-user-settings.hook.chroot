@@ -141,7 +141,7 @@ cat << EOF > /root/bin/install_user
 cp /root/.alias /home/user/.alias
 cp /root/.export /home/user/.export
 cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /home/user/.zshrc
-echo export PATH=/usr/local/bin:/usr/bin:/bin:/home/user/bin >> /home/user/.zshrc
+echo export PATH=/usr/local/bin:/usr/bin:/bin:/home/user/bin:/root/.cabal/bin >> /home/user/.zshrc
 cp /root/.tclshrc /home/user/.tclshrc
 cp /root/.wishrc /home/user/.wishrc
 cp /root/.octaverc /home/user/.octaverc
