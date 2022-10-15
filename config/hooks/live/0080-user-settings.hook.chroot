@@ -132,12 +132,12 @@ $!/bin/sh
 cp /root/.alias /home/user/.alias
 cp /root/.export /home/user/.export
 cp /root/.zshrc /home/user/.zshrc
-cp /root/.tclsh /home/user/.tclsh
+cp /root/.tclshrc /home/user/.tclshrc
 cp /root/.wishrc /home/user/.wishrc
 chown user:user /home/user/.alias
 chown user:user /home/user/.export
 chown user:user /home/user/.zshrc
-chown user:user /home/user/.tclsh
+chown user:user /home/user/.tclshrc
 chown user:user /home/user/.wishrc
 ln -s /usr/local/share/points_forces/scripts /home/user/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /home/user/.points_forcesrc
