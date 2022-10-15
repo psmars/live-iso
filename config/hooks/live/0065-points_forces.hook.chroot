@@ -9,14 +9,18 @@ make
 make install
 
 cd /root/points_forces/survey
-cmake -D core_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release -D VTK_PREFIX_PATH=/usr -VTK_MINOR_VERSION=0 .
+cat CMakeLists.txt | sed 's,\${VTK_PREFIX_PATH}/include/vtk-\${VTK_MAJOR_VERSION}.\${VTK_MINOR_VERSION},/usr/include/vtk-9.0,g' > a
+mv a CMakeLists.txt
+cmake -D core_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release .
 make
 make install
 
 cd /root/points_forces/structure/scripts
 wget https://sourceforge.net/projects/pointsforces/files/calipous.png/download -O calipous.png
 cd /root/points_forces/structure/
-cmake -D core_DIR=/usr/local/lib/points_forces -D survey_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release -D VTK_PREFIX_PATH=/usr -VTK_MINOR_VERSION=0 .
+cat CMakeLists.txt | sed 's,\${VTK_PREFIX_PATH}/include/vtk-\${VTK_MAJOR_VERSION}.\${VTK_MINOR_VERSION},/usr/include/vtk-9.0,g' > a
+mv a CMakeLists.txt
+cmake -D core_DIR=/usr/local/lib/points_forces -D survey_DIR=/usr/local/lib/points_forces -D CMAKE_BUILD_TYPE=Release .
 make
 make install
 cd /root
