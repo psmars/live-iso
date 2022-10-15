@@ -1,5 +1,10 @@
 apt-utils
 bison 
+blueman
+bluetooth
+bluez
+bluez-firmware
+bluez-tools
 build-essential 
 calculix-ccx
 calculix-cgx
@@ -33,6 +38,7 @@ libvtk9-dev
 make
 man-db
 manpages
+mariadb-client
 mc
 neovim
 net-tools
@@ -42,7 +48,9 @@ octave
 octave-ltfat
 octave-signal
 openssh-client
+postgresql-client
 procps
+qgis
 rlwrap
 rox-filer
 sakura
