@@ -160,6 +160,8 @@ cat export SHELL=/usr/bin/zsh >> /home/user/.bashrc
 EOF
 
 chmod u+x /root/bin/install_user
+chmod a+x /root
+chmod a+x /root/bin
 
 chsh -s /usr/bin/zsh
 echo root:wren | chpasswd
