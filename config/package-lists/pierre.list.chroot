@@ -78,6 +78,7 @@ openshot
 mplayer
 pciutils
 pdftk
+pip
 postgresql-client
 procps
 qgis
