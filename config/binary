@@ -10,7 +10,7 @@ LB_BINARY_FILESYSTEM="fat32"
 LB_APT_INDICES="true"
 
 # Set boot parameters
-LB_BOOTAPPEND_LIVE="boot=live components locales=en_GB.UTF-8 keyboard-layouts=us"
+LB_BOOTAPPEND_LIVE="boot=live hostname=london components locales=en_GB.UTF-8 keyboard-layouts=us noautologin noroot"
 
 # Set boot parameters
 LB_BOOTAPPEND_INSTALL=""

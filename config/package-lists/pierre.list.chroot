@@ -81,6 +81,7 @@ pdftk
 pip
 postgresql-client
 procps
+python3-pyftpdlib
 qgis
 rlwrap
 rox-filer
