@@ -56,6 +56,15 @@ EOF
 
 #######################################
 
+cat << EOF > /root/.screenrc
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.gW}%-w%{.rW}%n %t%{-}%+w %=%{..k} %H %{..W} %d/%m %C%a "
+EOF
+
+#######################################
+
 cat << EOF > /root/.zshrc
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -139,13 +148,14 @@ mkdir /root/bin
 
 cat << EOF > /root/bin/install_user
 \$!/usr/bin/zsh
-cp /root/.alias /home/user/.alias
-cp /root/.export /home/user/.export
+cp /root/.alias /home/user/
+cp /root/.export /home/user/
 cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /home/user/.zshrc
 echo export PATH=/usr/local/bin:/usr/bin:/bin:/home/user/bin:/root/.cabal/bin >> /home/user/.zshrc
-cp /root/.tclshrc /home/user/.tclshrc
-cp /root/.wishrc /home/user/.wishrc
-cp /root/.octaverc /home/user/.octaverc
+cp /root/.tclshrc /home/user/
+cp /root/.wishrc /home/user/
+cp /root/.octaverc /home/user/
+cp /root/.screenrc /home/user/
 ln -s /usr/local/share/points_forces/scripts /home/user/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /home/user/.points_forcesrc
 chown user:user /home/user/.points_forcesrc
