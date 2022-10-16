@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #######################################
 cat << EOF > /root/.alias
 alias ccx='time ccx'
@@ -158,6 +157,9 @@ mkdir /home/user/ftp
 chown user:user /home/user/*
 chown user:user /home/user/.*
 echo export SHELL=/usr/bin/zsh >> /home/user/.bashrc
+echo export PATH=${PATH}:/home/user/bin:/root/.cabal/bin >> /home/user/.bashrc
+echo source .export >> /home/user/.bashrc
+echo source .alias >> /home/user/.bashrc
 EOF
 
 #######################################
