@@ -37,6 +37,7 @@ export NETGEN_USER_DIR=\$HOME
 export NETGENDIR=/usr/local/bin
 export PAGER=less
 export SERIAL_PORT=/dev/ttyUSB0
+export SHELL=/usr/bin/zsh
 export SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)
 export TCLLIBPATH="/usr/local/lib/points_forces"
 export TEXMFCONFIG=\$HOME/.texlive/texmf-config
@@ -137,7 +138,7 @@ EOF
 mkdir /root/bin
 
 cat << EOF > /root/bin/install_user
-\$!/bin/sh
+\$!/usr/bin/zsh
 cp /root/.alias /home/user/.alias
 cp /root/.export /home/user/.export
 cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /home/user/.zshrc
@@ -145,12 +146,6 @@ echo export PATH=/usr/local/bin:/usr/bin:/bin:/home/user/bin:/root/.cabal/bin >>
 cp /root/.tclshrc /home/user/.tclshrc
 cp /root/.wishrc /home/user/.wishrc
 cp /root/.octaverc /home/user/.octaverc
-chown user:user /home/user/.alias
-chown user:user /home/user/.export
-chown user:user /home/user/.zshrc
-chown user:user /home/user/.tclshrc
-chown user:user /home/user/.wishrc
-chown user:user /home/user/.octaverc
 ln -s /usr/local/share/points_forces/scripts /home/user/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /home/user/.points_forcesrc
 chown user:user /home/user/.points_forcesrc
@@ -158,8 +153,10 @@ chown -R user:user /home/user/.points_forces
 chsh -s /usr/bin/zsh user
 mkdir /home/user/bin
 mkdir /home/user/data
-chown user:user /home/user/bin
-chown user:user /home/user/data
+mkdir /home/user/ftp
+chown user:user /home/user/*
+chown user:user /home/user/.*
+cat export SHELL=/usr/bin/zsh >> /home/user/.bashrc
 EOF
 
 chmod u+x /root/bin/install_user
