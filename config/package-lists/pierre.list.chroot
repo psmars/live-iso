@@ -101,7 +101,6 @@ tigervnc-viewer
 tk
 tk-dev
 traceroute
-ufraw
 usbutils
 valgrind
 wget
