@@ -50,7 +50,7 @@ EOF
 
 cat << EOF > /root/.octaverc
 set (0, "defaultlinelinewidth",2);
-PS1 ("\\[\\033[00;32m\\]octave:\\#> \\[\\033[0m\\]");
+PS1 ("\\\\[\\\\033[00;32m\\\\]octave:\\\\#> \\\\[\\\\033[0m\\\\]");
 graphics_toolkit("gnuplot")
 EOF
 
