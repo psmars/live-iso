@@ -65,6 +65,18 @@ EOF
 
 #######################################
 
+cat << EOF > /root/.gdbinit
+set disassembly-flavor intel
+set history save on
+set listsize 30
+set pagination off
+set confirm off
+set auto-load safe-path /
+set print pretty on
+EOF
+
+#######################################
+
 cat << EOF > /root/.zshrc
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -156,6 +168,7 @@ cp /root/.tclshrc /home/user/
 cp /root/.wishrc /home/user/
 cp /root/.octaverc /home/user/
 cp /root/.screenrc /home/user/
+cp /root/.gdbinit /home/user/
 ln -s /usr/local/share/points_forces/scripts /home/user/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /home/user/.points_forcesrc
 chown user:user /home/user/.points_forcesrc
