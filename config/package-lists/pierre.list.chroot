@@ -40,7 +40,6 @@ dosbox
 enblend
 enfuse
 enscript
-esptools
 exa
 exuberant-ctags 
 ffmpeg
@@ -54,7 +53,6 @@ fluxbox
 fonts-arphic-ukai
 fonts-arphic-uming
 fonts-gfs-didot
-fonts-hacko
 fonts-noto
 free42-nologo
 freecad
@@ -68,7 +66,6 @@ gfortran
 ghostscript
 gimp
 gimp-gmic
-gimp-ufraw
 git
 git-lfs
 gmsh
@@ -131,14 +128,11 @@ openshot
 mplayer
 pciutils
 pdftk
-pfsglview
-pfstools
 pinentry-tty
 pip
 postgresql-client
 procps
 python3-pyftpdlib
-python-serial
 python3-opencv
 python3-pip
 qgis
