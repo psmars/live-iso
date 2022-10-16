@@ -1,7 +1,8 @@
 *~
+.build
+.lock
+binary*
 build.log
 cache
-.build
-binary*
 chroot*
 debian-smars-amd64*
