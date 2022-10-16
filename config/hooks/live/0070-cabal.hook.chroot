@@ -1,5 +1,6 @@
 #!/bin/sh
 cd /root
+cabal update
 cabal install pandoc-2.10
 cabal install pandoc-citeproc
 cabal install pandoc-crossref
