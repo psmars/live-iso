@@ -175,6 +175,8 @@ chmod a+x /root/bin
 chsh -s /usr/bin/zsh
 echo root:wren | chpasswd
 
+cat /etc/adduser.conf | sed 's,DSHELL=/bin/bash,DSHELL=/bin/zsh,g' > a
+mv a /etc/adduser.conf
 cp /root/.alias /etc/skel/
 cp /root/.export /etc/skel/
 cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /etc/skel/
