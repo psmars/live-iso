@@ -158,41 +158,13 @@ EOF
 
 mkdir /root/bin
 
-cat << EOF > /root/bin/install_user
-\$!/usr/bin/zsh
-cp /root/.alias /home/user/
-cp /root/.export /home/user/
-cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /home/user/.zshrc
-echo export PATH=/usr/local/bin:/usr/bin:/bin:/home/user/bin:/root/.cabal/bin >> /home/user/.zshrc
-cp /root/.tclshrc /home/user/
-cp /root/.wishrc /home/user/
-cp /root/.octaverc /home/user/
-cp /root/.screenrc /home/user/
-cp /root/.gdbinit /home/user/
-ln -s /usr/local/share/points_forces/scripts /home/user/.points_forces
-ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /home/user/.points_forcesrc
-chown user:user /home/user/.points_forcesrc
-chown -R user:user /home/user/.points_forces
-chsh -s /usr/bin/zsh user
-mkdir /home/user/bin
-mkdir /home/user/data
-mkdir /home/user/ftp
-chown user:user /home/user/*
-chown user:user /home/user/.*
-echo export SHELL=/usr/bin/zsh >> /home/user/.bashrc
-echo export PATH=${PATH}:/home/user/bin:/root/.cabal/bin >> /home/user/.bashrc
-echo source .export >> /home/user/.bashrc
-echo source .alias >> /home/user/.bashrc
-EOF
-
 #######################################
-cat << EOF > /home/user/bin/ftpserver
+cat << EOF > /etc/skel/bin/ftpserver
 #!/bin/sh
-python3 -m pyftpdlib --directory=/home/user/ftp --port=2121 --write 
+python3 -m pyftpdlib --directory=${HOME}/ftp --port=2121 --write 
 EOF
 
-chown user:user /home/user/bin/ftpserver
-chmod u+x /home/user/bin/ftpserver
+chmod u+x /etc/skel/bin/ftpserver
 
 #######################################
 
@@ -202,4 +174,19 @@ chmod a+x /root/bin
 
 chsh -s /usr/bin/zsh
 echo root:wren | chpasswd
+
+cp /root/.alias /etc/skel/
+cp /root/.export /etc/skel/
+cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /etc/skel/
+echo export PATH=/usr/local/bin:/usr/bin:/bin:${HOME}/bin:/root/.cabal/bin >> /etc/skel/.zshrc
+cp /root/.tclshrc /etc/skel/
+cp /root/.wishrc /etc/skel/
+cp /root/.octaverc /etc/skel/
+cp /root/.screenrc /etc/skel/
+cp /root/.gdbinit /etc/skel/
+ln -s /usr/local/share/points_forces/scripts ${HOME}/.points_forces
+ln -s /usr/local/share/points_forces/examples/core/points_forcesrc ${HOME}/.points_forcesrc
+mkdir /etc/skel/bin
+mkdir /etc/skel/data
+mkdir /etc/skel/ftp
 
