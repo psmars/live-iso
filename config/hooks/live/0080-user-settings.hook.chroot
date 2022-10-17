@@ -159,6 +159,7 @@ EOF
 mkdir /root/bin
 
 #######################################
+mkdir /etc/skel/bin
 cat << EOF > /etc/skel/bin/ftpserver
 #!/bin/sh
 python3 -m pyftpdlib --directory=${HOME}/ftp --port=2121 --write 
@@ -188,7 +189,6 @@ cp /root/.screenrc /etc/skel/
 cp /root/.gdbinit /etc/skel/
 ln -s /usr/local/share/points_forces/scripts ${HOME}/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc ${HOME}/.points_forcesrc
-mkdir /etc/skel/bin
 mkdir /etc/skel/data
 mkdir /etc/skel/ftp
 
