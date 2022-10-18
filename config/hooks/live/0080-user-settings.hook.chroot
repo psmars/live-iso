@@ -191,4 +191,6 @@ ln -s /usr/local/share/points_forces/scripts ${HOME}/.points_forces
 ln -s /usr/local/share/points_forces/examples/core/points_forcesrc ${HOME}/.points_forcesrc
 mkdir /etc/skel/data
 mkdir /etc/skel/ftp
+apt-file update
+
 
