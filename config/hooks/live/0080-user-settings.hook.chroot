@@ -162,7 +162,7 @@ mkdir /root/bin
 mkdir /etc/skel/bin
 cat << EOF > /etc/skel/bin/ftpserver
 #!/bin/sh
-python3 -m pyftpdlib --directory=${HOME}/ftp --port=2121 --write 
+python3 -m pyftpdlib --directory=\${HOME}/ftp --port=2121 --write 
 EOF
 
 chmod u+x /etc/skel/bin/ftpserver
@@ -191,14 +191,14 @@ mv a /etc/adduser.conf
 cp /root/.alias /etc/skel/
 cp /root/.export /etc/skel/
 cat /root/.zshrc | sed 's,blue,green,g' | sed '/PATH/d' > /etc/skel/.zshrc
-echo export PATH=/usr/local/bin:/usr/bin:/bin:${HOME}/bin:/root/.cabal/bin >> /etc/skel/.zshrc
+echo export PATH=/usr/local/bin:/usr/bin:/bin:\${HOME}/bin >> /etc/skel/.zshrc
 cp /root/.tclshrc /etc/skel/
 cp /root/.wishrc /etc/skel/
 cp /root/.octaverc /etc/skel/
 cp /root/.screenrc /etc/skel/
 cp /root/.gdbinit /etc/skel/
-ln -s /usr/local/share/points_forces/scripts ${HOME}/.points_forces
-ln -s /usr/local/share/points_forces/examples/core/points_forcesrc ${HOME}/.points_forcesrc
+ln -s /usr/local/share/points_forces/scripts /etc/skel/.points_forces
+ln -s /usr/local/share/points_forces/examples/core/points_forcesrc /etc/skel/.points_forcesrc
 mkdir /etc/skel/data
 mkdir /etc/skel/ftp
 apt-file update
