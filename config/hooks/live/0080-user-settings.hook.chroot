@@ -169,6 +169,16 @@ chmod u+x /etc/skel/bin/ftpserver
 
 #######################################
 
+cat << EOF > /etc/skel/bin/secret
+#!/bin/sh
+gpgconf --launch gpg-agent
+echo UPDATESTARTUPTTY | gpg-connect-agent
+EOF
+
+chmod u+x /etc/skel/bin/secret
+
+#######################################
+
 chmod u+x /root/bin/install_user
 chmod a+x /root
 chmod a+x /root/bin
@@ -192,5 +202,5 @@ ln -s /usr/local/share/points_forces/examples/core/points_forcesrc ${HOME}/.poin
 mkdir /etc/skel/data
 mkdir /etc/skel/ftp
 apt-file update
-
+echo 2 | update-alternatives --config pinentry
 
