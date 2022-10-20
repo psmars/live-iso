@@ -6,3 +6,4 @@ build.log
 cache
 chroot*
 debian-smars-amd64*
+*pdf
