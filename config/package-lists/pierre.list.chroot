@@ -155,6 +155,7 @@ sox
 sudo
 sqlite3
 sqlitebrowser
+sshfs
 subversion
 suckless-tools
 swig
