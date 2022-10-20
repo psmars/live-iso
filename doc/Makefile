@@ -1,5 +1,6 @@
 PD=pandoc -F pandoc-crossref --pdf-engine=xelatex
-all: postgres_docker.pdf
+all: postgres_docker.pdf \
+	live_iso.pdf
 
 %.pdf: %.md
 		$(PD) -o $@ $(HEAD) $<
