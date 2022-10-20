@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /root
+git clone https://github.com/psmars/live-iso.git
+
