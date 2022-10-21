@@ -9,5 +9,4 @@ chmod -R a+rx /root/.cabal/bin
 mv /root/.cabal/bin/`readlink /root/.cabal/bin/pandoc` /usr/local/bin/
 mv /root/.cabal/bin/`readlink /root/.cabal/bin/pandoc-citeproc` /usr/local/bin/
 mv /root/.cabal/bin/`readlink /root/.cabal/bin/pandoc-crossref` /usr/local/bin/
-rm -rf /root/.cabal
 
