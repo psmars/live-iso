@@ -125,6 +125,7 @@ octave
 octave-ltfat
 octave-signal
 openssh-client
+openssh-server
 openshot
 mplayer
 pciutils
