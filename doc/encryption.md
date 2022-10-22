@@ -34,7 +34,7 @@ adduser --home /media/sdX3/USER_NAME USER_NAME
 # Reuse the home directory after reboot
 
 ```
-pmount /dev/sdX3
+pmount -e /dev/sdX3
 # type password
 adduser --home /media/sdX3/USER_NAME USER_NAME
 # get back what you saved before
