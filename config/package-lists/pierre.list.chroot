@@ -131,7 +131,7 @@ mplayer
 pciutils
 pdftk
 pinentry-tty
-pip
+pmount
 postgresql-client
 procps
 python3-pyftpdlib
