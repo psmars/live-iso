@@ -6,12 +6,9 @@ fontfamily: cmbright
 fontsize: 12pt
 ---
 
-as root:
+as root, if necessary makes your user member of the docker group:
 
 ```
-apt update
-apt upgrade
-apt install docker.io
 usermod -a -G docker user
 logout
 ```
