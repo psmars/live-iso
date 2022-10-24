@@ -1,5 +1,5 @@
 #!/bin/sh
-apt install gnupg software-properties-common
+apt install -y gnupg software-properties-common
 mkdir -m755 -p /etc/apt/keyrings
 wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
 cat << EOF > /etc/apt/sources.list.d/qgis.sources
@@ -10,6 +10,6 @@ Architectures: amd64
 Components: main
 Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
 EOF
-apt update
-apt install qgis qgis-plugin-grass
+apt update -y
+apt install -y qgis qgis-plugin-grass
 
