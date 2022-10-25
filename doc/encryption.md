@@ -29,6 +29,12 @@ pmount /dev/sdX3
 # type password
 adduser --home /media/sdX3/USER_NAME USER_NAME
 # the skeleton files will be copied
+# if you did that before and have a backup of your personal settings
+# (see blow)
+cd /media/sdX3
+cp some_safe_place USER_NAME.tar.bz2
+chown USER_NAME:USER_NAME USER_NAME.tar.bz2
+tar xvf USER_NAME.tar.bz2
 ```
 
 # Reuse the home directory after reboot
@@ -38,5 +44,11 @@ pmount -e /dev/sdX3
 # type password
 adduser --home /media/sdX3/USER_NAME USER_NAME
 # get back what you saved before
+# make all the settings you want, logout and login as user or root
+# create a backup of your personal settings
+cd /media/sdX3
+tar cvf USER_NAME.tar USER_NAME
+bzip2 USER_NAME.tar
+cp USER_NAME.tar.bz2 some_safe_place
 ```
 
