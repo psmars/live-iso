@@ -13,6 +13,8 @@ usermod -a -G docker user
 logout
 ```
 
+It may also be becessary to add 'nameserver 8.8.8.8' to /etc/resolv.conf
+
 as user:
 
 ```
