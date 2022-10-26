@@ -1,0 +1,11 @@
+#set auto_path "/usr/local/lib/points_forces $auto_path"
+if {$tcl_interactive} {
+	package require tclreadline 
+	namespace eval tclreadline {
+			proc prompt1 {} {
+				return "[exec whoami]@[exec hostname -fs] \033\[0;31m[pwd]\n\033\[0;32m%\033\[0m "
+			}
+	}    
+	::tclreadline::Loop    
+}    
+

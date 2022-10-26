@@ -1,0 +1,7 @@
+set color
+color 1 = @white;@black
+color 2 = @blue;@black
+color 3 = @red;@black
+color 4 = @black;@blue
+color 5 = @black;@red
+

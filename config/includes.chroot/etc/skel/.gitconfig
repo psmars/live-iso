@@ -1,0 +1,46 @@
+[push]
+	default = simple
+	followTags = true
+[color]
+	status = auto
+	branch = auto
+	ui = auto
+[color "diff"]
+	meta = yellow
+	frag = cyan
+	old = red
+	new = green
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "status"]
+	added = red
+	changed = green
+	untracked = cyan
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = false
+[difftool "nvimdiff"]
+	cmd = "$EDITOR -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
+[alias]
+	d = difftool
+[annex]
+	largefiles = exclude=*.xmp and (include=*nef or include=*NEF or include=*JPG or include=*jpg)
+[merge]
+	conflictstyle = diff3
+[core]
+	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less -R
+	autocrlf = input
+[pull]
+	rebase = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[http]
+	sslverify = false
+

@@ -1,0 +1,2 @@
+#!/bin/bash
+ps auxc | awk '{print $3 "\t" $2 "\t" $11}' | sort -rg | awk 'BEGIN {print "%CPU\tPID\tProg"} {print}' | head

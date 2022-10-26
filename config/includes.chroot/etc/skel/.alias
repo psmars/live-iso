@@ -1,0 +1,15 @@
+alias ccx='time ccx'
+alias cgdb='cgdb -q'
+alias df='df -h'
+alias exit='clear && exit 2> /dev/null'
+alias grep='grep --color=always'
+alias gdb='gdb -q'
+alias ls=exa
+alias more=less
+alias octave='octave --no-gui -q'
+alias su='su -l'
+alias tclsh='rlwrap tclsh'
+alias telnet='rlwrap  telnet'
+alias vi=nvim
+alias vim=nvim
+

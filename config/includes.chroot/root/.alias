@@ -1,0 +1,11 @@
+alias cgdb='cgdb -q'
+alias df='df -h'
+alias exit='clear && exit 2> /dev/null'
+alias grep='grep --color=always'
+alias gdb='gdb -q'
+alias ls=exa
+alias more=less
+alias su='su -l'
+alias vi=nvim
+alias vim=nvim
+

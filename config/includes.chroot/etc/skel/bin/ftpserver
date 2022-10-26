@@ -1,0 +1,3 @@
+#!/bin/sh
+python3 -m pyftpdlib --directory=${HOME}/ftp --port=2121 --write 
+

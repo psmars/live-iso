@@ -1,0 +1,4 @@
+#!/bin/sh
+upower -i `upower -e | grep battery`
+echo "******\n"
+upower -i `upower -e | grep battery` | awk '/percentage/ {print $2} /time/ {if ($3=="full:") printf "%s %s (charging...) ",$4,$5; else printf "%s %s (discharging...) ",$4,$5}' | awk '{printf "\033[1;31m%s\033[30m: %s %s %s\n",$4,$1,$2,$3}'
