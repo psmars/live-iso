@@ -25,9 +25,7 @@ mkfs.ext4 /dev/mapper/data
 # Create an encrypted home directory
 
 ```
-pmount /dev/sdX3
-# type password
-adduser --home /media/sdX3/USER_NAME USER_NAME
+loguser
 # the skeleton files will be copied
 # if you did that before and have a backup of your personal settings
 # (see blow)
@@ -40,9 +38,7 @@ tar xvf USER_NAME.tar.bz2
 # Reuse the home directory after reboot
 
 ```
-pmount -e /dev/sdX3
-# type password
-adduser --home /media/sdX3/USER_NAME USER_NAME
+loguser
 # get back what you saved before
 # make all the settings you want, logout and login as user or root
 # create a backup of your personal settings

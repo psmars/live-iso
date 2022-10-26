@@ -159,6 +159,20 @@ EOF
 mkdir /root/bin
 
 #######################################
+cat << EOF > /root/bin/loguser
+#!/bin/sh
+echo -n "user name?: "
+read USER_NAME
+export PARTI=`df | /usr/bin/grep 'live/medium' | awk '{print $1}' | sed 's,1,3,g'`
+echo "first give the password to unlock $PARTI"
+pmount -e $PARTI 
+echo "$USER_NAME login info:"
+echo "give a new password to $USER_NAME"
+adduser --home /media/$PARTI/$USER_NAME $USER_NAME
+EOF
+
+chmod 700 /root/bin/loguser
+#######################################
 mkdir /etc/skel/bin
 cat << EOF > /etc/skel/bin/ftpserver
 #!/bin/sh
