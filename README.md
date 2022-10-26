@@ -16,5 +16,7 @@ The packages installed are listed in './config/package-lists'
 
 Extra steps and configurations are defined in './config/hooks/live'
 
-And building defaults are found in './auto' and in the './Makefile' 
+Building defaults are found in './auto' and in the './Makefile' 
+
+Notes to create an encrypted partition and other stuff can be found in './doc'
 
