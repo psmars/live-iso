@@ -6,6 +6,6 @@ echo "first give the password to unlock $PARTI"
 pmount -e $PARTI     
 echo "$USER_NAME login info:"    
 echo "give a new password to $USER_NAME"    
-USER_HOME=`echo $PARTI | sed "s,/dev/,/media/,g;s,$,$USER_NAME,g"`
+USER_HOME=`echo $PARTI | sed "s,/dev/,/media/,g;s,$,/$USER_NAME,g"`
 adduser --home $USER_HOME $USER_NAME
 
