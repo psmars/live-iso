@@ -8,5 +8,6 @@ docker run --name qgis-postgres \
     -e PGDATA=/var/lib/postgresql/data/pgdata \
     -v ~/qgis:/var/lib/postgresql/data \
     -p 5432:5432 \
-    -it postgis/postgis
+    -d \
+		postgis/postgis
 
