@@ -1,0 +1,14 @@
+#!/bin/sh
+# if problem to get it work
+# add 8.8.8.8 to resolv.conf
+# systemctl daemon-reload
+# systemctl restart docker
+docker run --name qgis-postgres \
+    --rm \
+    -e POSTGRES_USER=postgres \
+    -e POSTGRES_PASSWORD=secret \
+    -e PGDATA=/var/lib/postgresql/data/pgdata \
+    -v ~/qgis:/var/lib/postgresql/data \
+    -p 5432:5432 \
+    -it postgis/postgis
+
