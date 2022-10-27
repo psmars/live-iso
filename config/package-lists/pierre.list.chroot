@@ -182,6 +182,7 @@ verbiste
 wget
 wireless-tools
 wireshark
+x11vnc
 xxd
 youtube-dl
 yubioath-desktop
