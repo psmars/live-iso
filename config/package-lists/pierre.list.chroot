@@ -21,7 +21,6 @@ cabal-install
 calculix-ccx
 calculix-cgx
 ccache
-cgdb
 cloudcompare
 cmake
 cmake-curses-gui 

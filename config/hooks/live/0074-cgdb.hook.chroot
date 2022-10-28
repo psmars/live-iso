@@ -1,0 +1,10 @@
+#!/bin/sh
+cd /root
+git clone https://github.com/cgdb/cgdb.git
+cd cgdb
+./autogen.sh
+./configure
+make
+make install
+cd /root
+rm -rf cgdb
