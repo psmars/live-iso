@@ -46,4 +46,5 @@ PROMPT="
 export PATH=/usr/local/bin:/usr/bin:/bin:$HOME/bin:/usr/sbin:/usr/local/sbin:/usr/bin/X11
 source ~/.export
 source ~/.alias
+umask 027
 
