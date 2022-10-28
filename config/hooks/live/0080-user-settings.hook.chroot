@@ -10,7 +10,7 @@ echo root:wren | chpasswd
 
 cat /etc/adduser.conf | sed 's,DSHELL=/bin/bash,DSHELL=/bin/zsh,g' > a
 mv a /etc/adduser.conf
-cat /etc/adduser.conf | sed 's,#EXTRA_GROUPS=",EXTRA_GROUPS=" bluetooth netdev docker ,g' > a
+cat /etc/adduser.conf | sed 's,#EXTRA_GROUPS=",EXTRA_GROUPS="bluetooth netdev docker ,g' > a
 mv a /etc/adduser.conf
 apt-file update
 echo 2 | update-alternatives --config pinentry
