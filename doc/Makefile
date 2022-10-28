@@ -4,7 +4,8 @@ all: \
 	fixed_ip.pdf \
 	live_iso.pdf \
 	postgres_docker.pdf \
-	postgres_qgis.pdf
+	postgres_qgis.pdf \
+	qemu.pdf
 
 %.pdf: %.md
 		$(PD) -o $@ $(HEAD) $<
