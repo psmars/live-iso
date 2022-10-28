@@ -13,7 +13,8 @@ qemu-system-x86_64 \
 	-boot d \
 	-cdrom debian-smars-amd64.hybrid.iso \
 	-enable-kvm \
-	-m 4096
+	-m 4096 \
+	-vga virtio
 ```
 
 # Install the iso on a qemu image
