@@ -1,5 +1,6 @@
 PD=pandoc -F pandoc-crossref --pdf-engine=xelatex
 all: \
+	docker.pdf \
 	encryption.pdf \
 	fixed_ip.pdf \
 	live_iso.pdf \
