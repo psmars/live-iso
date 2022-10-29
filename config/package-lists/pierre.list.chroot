@@ -138,6 +138,7 @@ verbiste
 wget
 wireless-tools
 x11vnc
+xserver-xorg-input-synaptics
 xxd
 youtube-dl
 zbar-tools
