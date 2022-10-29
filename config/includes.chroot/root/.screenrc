@@ -1,5 +1,5 @@
 startup_message off
 hardstatus on
 hardstatus alwayslastline
-hardstatus string "%{.gW}%-w%{.rW}%n %t%{-}%+w %=%{..k} %H %{..W} %d/%m %C%a "
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %d/%m %C%a "
 
