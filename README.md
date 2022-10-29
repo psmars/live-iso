@@ -7,7 +7,7 @@ Steps to prepare the iso file (it will take a while, hour(s)...):
 > git clone https://github.com/psmars/live-iso.git
 > cd live-iso
 > make
-> dd if=debian-smars-amd64.hybrid.iso | pv | dd of=/dev/sdX bs=1M; sync
+> dd if=smars-kids-amd64.hybrid.iso | pv | dd of=/dev/sdX bs=1M; sync
 ```
 
 (/dev/sdX is the device on which you want the image to be burned. Example: /dev/sdb)

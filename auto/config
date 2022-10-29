@@ -10,10 +10,10 @@ lb config noauto \
 	--backports true \
 	--debian-installer live \
 	--debian-installer-gui false \
-	--bootappend-live "boot=live hostname=london components locales=en_GB.UTF-8 keyboard-layouts=us noautologin noroot" \
+	--bootappend-live "boot=live hostname=taipei components locales=en_GB.UTF-8 keyboard-layouts=us noautologin noroot" \
 	--hdd-label points_forces \
-	--image-name debian-smars \
-	--iso-volume debian-smars \
+	--image-name smars-kids \
+	--iso-volume smars-kids \
 	--utc-time true \
 	--apt-recommends true \
 	--iso-preparer "Pierre SMARS smars@yuntech.edu.tw" \
