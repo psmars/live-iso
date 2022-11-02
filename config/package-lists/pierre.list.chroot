@@ -78,6 +78,8 @@ lshw
 make
 man-db
 manpages
+manpages-fr
+manpages-fr-extra
 mariadb-client
 mc
 mencoder
