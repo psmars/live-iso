@@ -32,7 +32,7 @@
 	conflictstyle = diff3
 [core]
 	excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less -R
+	pager = less -R
 	autocrlf = input
 [pull]
 	rebase = false
