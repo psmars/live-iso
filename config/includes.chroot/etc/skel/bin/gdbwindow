@@ -1,0 +1,9 @@
+#!/bin/sh
+clear
+echo Input-Output window for gdb
+echo in gdb:
+echo \(gdb\) tty $HOME/window
+echo \(gdb\) tui enable
+echo ""
+socat PTY,link=$HOME/window STDIO,cfmakeraw
+
