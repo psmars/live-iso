@@ -5,7 +5,7 @@ echo \
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 apt update -y
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+apt-get -o Dpkg::Options::="--force-confold" install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sed 's,docker:x:997:,docker:x:997:user,g' < /etc/group > a
 mv a /etc/group
 
