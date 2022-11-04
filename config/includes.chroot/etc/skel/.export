@@ -1,4 +1,4 @@
-export BLOCKSIZE=K    
+export BLOCKSIZE=K
 export BROWSER=firefox
 export EDITOR=nvim
 export GPG_TTY=$(tty)
@@ -8,7 +8,7 @@ export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 export LC_COLLATE=POSIX
 export LC_TYPE=en_GB.UTF-8
-export LD_LIBRARY_PATH=/root/lib
+export LD_LIBRARY_PATH=$HOME/lib
 export MM_CHARSET=UTF-8
 export NETGEN_USER_DIR=$HOME
 export NETGENDIR=/usr/local/bin
