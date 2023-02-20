@@ -102,6 +102,7 @@ libsox-fmt-all
 libvtk9
 libvtk9-dev
 linux-perf
+live-build
 lshw
 make
 man-db
