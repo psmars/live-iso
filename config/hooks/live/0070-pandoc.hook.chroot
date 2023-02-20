@@ -1,12 +1,7 @@
 #!/bin/sh
 cd /root
-cabal update
-cabal --overwrite-policy=always install pandoc
-cabal --overwrite-policy=always install pandoc-citeproc
-cabal --overwrite-policy=always install pandoc-crossref
-chmod a+rx /root/.cabal
-chmod -R a+rx /root/.cabal/bin
-mv /root/.cabal/bin/`readlink /root/.cabal/bin/pandoc` /usr/local/bin/
-mv /root/.cabal/bin/`readlink /root/.cabal/bin/pandoc-citeproc` /usr/local/bin/
-mv /root/.cabal/bin/`readlink /root/.cabal/bin/pandoc-crossref` /usr/local/bin/
+cabal v2-update
+cabal v2-install --install-method=copy --installdir=/usr/local/bin pandoc pandoc-citeproc pandoc-crossref
+#remove pandoc in /usr/bin
+apt remove --autoremove --yes pandoc
 
