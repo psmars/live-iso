@@ -102,8 +102,6 @@ less
 libsox-fmt-all
 libvtk9
 libvtk9-dev
-linux-headers-6.0.0-0.deb11.6-amd64
-linux-image-6.0.0-0.deb11.6-amd64
 linux-perf
 live-build
 lshw
