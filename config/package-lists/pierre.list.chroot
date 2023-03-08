@@ -1,12 +1,9 @@
 apt-file
 apt-utils
-arduino
-arduino-builder
 aspell
 aspell-en
 atmel-firmware
 audacity
-avrdude
 bibtool
 bison 
 blender
@@ -18,8 +15,6 @@ bluez-tools
 bsdutils
 build-essential 
 cabal-install
-calculix-ccx
-calculix-cgx
 ccache
 cloudcompare
 cmake
@@ -33,7 +28,7 @@ cu
 curl
 darktable
 dcraw
-debian-installer-launcher
+dkms
 dia
 dos2unix
 dosbox
@@ -58,10 +53,7 @@ fonts-noto
 free42-nologo
 freecad
 ftp
-gcc-avr
 gdal-bin
-gdb 
-gdb-avr
 geogebra
 gfortran
 ghostscript
@@ -76,14 +68,12 @@ gpart
 gparted
 gphoto2
 graphviz
-groff-base
 htop
 hugin
 imagej
 imagemagick
 info
 inkscape
-iperf
 iputils-ping
 iw
 julia
@@ -91,10 +81,6 @@ jupyter
 jupyter-console
 jupyter-notebook
 kazam
-kcachegrind
-kicad
-kicad-libraries
-kicad-symbols
 kst
 latex-cjk-all
 less
@@ -114,7 +100,6 @@ mc
 mencoder
 meshlab
 micro
-mosquitto-clients
 mplayer
 mtools
 neovim
@@ -124,7 +109,6 @@ netpbm
 net-tools
 network-manager
 nfs-common
-ngspice
 nmap
 octave
 octave-ltfat
@@ -154,7 +138,6 @@ scdaemon
 screen
 screenkey
 scrot
-sdcc
 socat
 sox
 sudo
@@ -187,6 +170,7 @@ wget
 wireless-tools
 wireshark
 x11vnc
+xorg
 xserver-xorg-input-synaptics
 xxd
 youtube-dl

@@ -8,12 +8,12 @@ lb config noauto \
 	--firmware-chroot true \
 	--firmware-binary true \
 	--backports true \
-	--debian-installer live \
+	--debian-installer none \
 	--debian-installer-gui false \
-	--bootappend-live "boot=live hostname=london components locales=en_GB.UTF-8 keyboard-layouts=us noautologin noroot" \
+	--bootappend-live "boot=live hostname=manchester components locales=en_GB.UTF-8 keyboard-layouts=us noautologin noroot" \
 	--hdd-label points_forces \
-	--image-name debian-smars \
-	--iso-volume debian-smars \
+	--image-name debian-smars-s \
+	--iso-volume debian-smars-s \
 	--utc-time true \
 	--apt-recommends true \
 	--iso-preparer "Pierre SMARS smars@yuntech.edu.tw" \

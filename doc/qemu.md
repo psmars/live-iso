@@ -11,7 +11,7 @@ fontsize: 12pt
 ```
 qemu-system-x86_64 \
 	-boot d \
-	-cdrom debian-smars-amd64.hybrid.iso \
+	-cdrom debian-smars-s-amd64.hybrid.iso \
 	-enable-kvm \
 	-m 4096 \
 	-vga virtio
@@ -23,7 +23,7 @@ qemu-system-x86_64 \
 qemu-img create live.img 30G
 qemu-system-x86_64  \
 	-boot d \
-	-cdrom debian-smars-amd64.hybrid.iso \
+	-cdrom debian-smars-s-amd64.hybrid.iso \
 	-enable-kvm \
 	-m 4096 \
 	-drive format=raw,index=0,file=live.img
