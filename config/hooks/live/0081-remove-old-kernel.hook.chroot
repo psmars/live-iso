@@ -1,0 +1,5 @@
+#!/bin/bash
+apt remove -y "linux-image-5*"
+apt remove -y "linux-headers-5*"
+apt autoremove -y
+
