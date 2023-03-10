@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 apt install -t bullseye-backports -y firmware-atheros
 apt install -t bullseye-backports -y firmware-iwlwifi
 apt install -t bullseye-backports -y firmware-ipw2x0
