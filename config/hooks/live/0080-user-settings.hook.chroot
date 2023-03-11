@@ -8,7 +8,6 @@ chmod a+x /root/bin
 chsh -s /usr/bin/zsh
 echo root:wren | chpasswd
 
-mv a /etc/adduser.conf
 apt-file update
 echo 2 | update-alternatives --config pinentry
 
