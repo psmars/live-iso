@@ -1,0 +1,10 @@
+#!/bin/sh
+export USER_HOME=`cat /etc/passwd | grep 1001 | awk -F ':' '{print $6}'`
+systemctl stop docker
+systemctl stop docker.socket
+systemctl stop containerd
+cp -ra /var/lib/docker $USER_HOME
+rm -rf /var/lib/docker
+ln -s $USER_HOME/docker /var/lib/docker
+systemctl start docker
+
