@@ -44,7 +44,7 @@ login as new user
 ```
 psql -U pierre -h localhost -d test
 create table users \
-    (id_test serial primary key,\
+    (id_user serial primary key,\
     name varchar(50) unique not null,\
     password varchar(50) not null,\
     created timestamp not null);
