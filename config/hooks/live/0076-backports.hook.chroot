@@ -1,8 +1,8 @@
 #!/bin/bash
-apt install -t bullseye-backports -y firmware-atheros
-apt install -t bullseye-backports -y firmware-iwlwifi
-apt install -t bullseye-backports -y firmware-ipw2x0
-apt install -t bullseye-backports -y firmware-realtek
-apt install -t bullseye-backports -y firmware-linux
-apt install -t bullseye-backports -y bluez-firmware
+apt install -y firmware-atheros
+apt install -y firmware-iwlwifi
+apt install -y firmware-ipw2x0
+apt install -y firmware-realtek
+apt install -y firmware-linux
+apt install -y bluez-firmware
 

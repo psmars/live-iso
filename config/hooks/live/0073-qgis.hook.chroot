@@ -5,7 +5,7 @@ wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/dow
 cat << EOF > /etc/apt/sources.list.d/qgis.sources
 Types: deb deb-src
 URIs: https://qgis.org/debian
-Suites: bullseye
+Suites: bookworm
 Architectures: amd64
 Components: main
 Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
