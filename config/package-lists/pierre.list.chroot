@@ -87,7 +87,7 @@ inkscape
 iperf
 iputils-ping
 iw
-julia
+#julia #strange...
 jupyter
 jupyter-console
 jupyter-notebook
@@ -102,6 +102,7 @@ less
 libsox-fmt-all
 libvtk9.1
 libvtk9-dev
+linux-headers-amd64
 linux-perf
 live-build
 lshw
@@ -126,7 +127,7 @@ nfs-common
 ngspice
 nmap
 octave
-octave-ltfat-common
+#octave-ltfat-common
 octave-signal
 openssh-client
 openssh-server
