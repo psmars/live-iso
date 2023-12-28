@@ -1,6 +1,0 @@
-#!/bin/sh
-cd /root
-git clone https://github.com/kelebek333/rtl8192fu-dkms
-dkms add ./rtl8192fu-dkms
-dkms install rtl8192fu/5.8.6.2
-
