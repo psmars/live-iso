@@ -3,8 +3,8 @@
 cd /root
 git clone https://github.com/vxl/vxl.git
 cd /root/vxl
+git apply /root/vxl_pierre.patch
 cmake -D VXL_BUILD_CONTRIB=ON .
 make
 make install
-
 
