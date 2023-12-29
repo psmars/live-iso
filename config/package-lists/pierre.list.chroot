@@ -16,6 +16,7 @@ bluez
 bluez-firmware
 bluez-tools
 bsdutils
+btop
 build-essential 
 cabal-install
 calculix-ccx
@@ -102,7 +103,6 @@ less
 libsox-fmt-all
 libvtk9.1
 libvtk9-dev
-linux-headers-amd64
 linux-perf
 live-build
 lshw
@@ -126,6 +126,7 @@ network-manager
 nfs-common
 ngspice
 nmap
+nnn
 octave
 #octave-ltfat-common
 octave-signal
